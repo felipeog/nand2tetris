@@ -28,7 +28,9 @@ function tests() {
     console.log("> Success");
   }
 
-  console.log(`Success: ${testsPaths.length - failCount}; Fail: ${failCount}`);
+  console.log(
+    `\nSuccess: ${testsPaths.length - failCount}; Fail: ${failCount}`
+  );
 }
 
 tests();
