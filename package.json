@@ -1,0 +1,11 @@
+{
+  "name": "nand2tetris",
+  "scripts": {
+    "hdl-js": "hdl-js",
+    "test": "node ./tests/index.js"
+  },
+  "dependencies": {
+    "glob": "^8.0.3",
+    "hdl-js": "^0.0.72"
+  }
+}
