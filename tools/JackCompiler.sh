@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-# $Id: HardwareSimulator.sh,v 1.1 2014/06/17 21:14:01 marka Exp $
+# $Id: JackCompiler.sh,v 1.1 2014/06/17 21:14:01 marka Exp $
 # mark.armbrust@pobox.com
 
 # User's CDPATH can interfere with cd in this script
@@ -11,26 +11,25 @@ dir="$PWD"
 cd "`dirname "$script"`"
 if [ \( $# -gt 1 \) -o \( "$1" = "-h" \) -o \( "$1" = "--help" \) ]
 then
-    echo "Usage:"
-    echo "    `basename "$0"`             Starts the Hardware Simulator in"
-    echo "                                     interactive mode."
-    echo "    `basename "$0"` FILE.tst    Starts the Hardware Simulator and runs the"
-    echo "                                     FILE.tst test script.  The success/failure"
-    echo "                                     message is printed to the command console."
-elif [ $# -eq 0 ]
-then
-    # Run hardware simulator in interactive mode
-    java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain &
+	echo "Usage:"
+	echo "    `basename "$0"`              Compiles all .jack files in the current"
+	echo "                                 working directory."
+	echo "    `basename "$0"` DIRECTORY    Compiles all .jack files in DIRECTORY."
+	echo "    `basename "$0"` FILE.jack    Compiles FILE.jack to FILE.vm."
 else
-    # Convert arg1 to an absolute path and run hardware simulator with arg1
-    if [ `echo "$1" | sed -e "s/\(.\).*/\1/"` = / ]
-    then
-        arg1="$1"
-    else
-        arg1="${dir}/$1"
-    fi
-    #	echo Running "$arg1"
-    java -classpath "${CLASSPATH}:bin/classes:BuiltIn:bin/lib/Hack.jar:bin/lib/HackGUI.jar:bin/lib/Simulators.jar:bin/lib/SimulatorsGUI.jar:bin/lib/Compilers.jar" HardwareSimulatorMain "$arg1"
-fi
-    java -classpath "${CLASSPATH}:bin/classes:bin/lib/Hack.jar:bin/lib/Compilers.jar" Hack.Compiler.JackCompiler "$arg1"
+	if [ $# -eq 0 ]
+	then
+		# Use current directory as arg1
+		arg1="$dir"
+	else
+		# Convert arg1 to an absolute path
+		if [ `echo "$1" | sed -e "s/\(.\).*/\1/"` = / ]
+		then
+			arg1="$1"
+		else
+			arg1="$dir/$1"
+		fi
+	fi
+	echo Compiling "$arg1"
+	java -classpath "${CLASSPATH}:bin/classes:bin/lib/Hack.jar:bin/lib/Compilers.jar" Hack.Compiler.JackCompiler "$arg1"
 fi
