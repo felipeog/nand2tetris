@@ -19,3 +19,11 @@
 
 - [From Nand to Tetris Part 1](https://youtube.com/playlist?list=PLrDd_kMiAuNmSb-CKWQqq9oBFN_KNMTaI)
 - [From Nand to Tetris Part 2](https://youtube.com/playlist?list=PLrDd_kMiAuNmllp9vuPqCuttC1XL9VyVh)
+
+## Forum
+
+- http://nand2tetris-questions-and-answers-forum.52.s1.nabble.com
+
+## Hardware project
+
+- https://gitlab.com/x653/nand2tetris-fpga/
