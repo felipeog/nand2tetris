@@ -1,10 +1,11 @@
 {
-  "name": "nand2tetris",
+  "name": "nand2tetris-tests",
   "scripts": {
     "hdl-js": "hdl-js",
-    "test": "node ./tests/index.js"
+    "test": "node ./index.js"
   },
   "dependencies": {
+    "cli-progress": "^3.11.2",
     "glob": "^8.0.3",
     "hdl-js": "^0.0.72"
   }
