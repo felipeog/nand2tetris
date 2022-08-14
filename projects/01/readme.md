@@ -14,7 +14,7 @@
 - [x] Not16
 - [x] And16
 - [x] Or16
-- [ ] Mux16
+- [x] Mux16
 
 ## Multi-way variants
 
