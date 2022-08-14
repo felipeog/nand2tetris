@@ -19,7 +19,7 @@
 ## Multi-way variants
 
 - [x] Or8Way
-- [ ] Mux4Way16
+- [x] Mux4Way16
 - [ ] Mux8Way16
 - [ ] DMux4Way
 - [ ] DMux8Way
