@@ -12,10 +12,10 @@ function logResults(results) {
   }
 }
 
-function tests() {
+function runTests() {
+  const progressBar = new cliProgress.SingleBar();
   const testsGlobPattern = path.resolve(__dirname, "../projects/**/*.tst");
   const testsPaths = glob.sync(testsGlobPattern);
-  const progressBar = new cliProgress.SingleBar();
   const results = {
     success: [],
     fail: [],
@@ -47,4 +47,4 @@ function tests() {
   logResults(results.fail);
 }
 
-tests();
+runTests();
