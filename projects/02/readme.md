@@ -5,4 +5,4 @@
 - [x] Add16
 - [x] Inc16
 - [x] ALUnostat
-- [ ] ALU
+- [x] ALU
