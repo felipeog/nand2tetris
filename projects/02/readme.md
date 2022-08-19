@@ -4,5 +4,5 @@
 - [x] FullAdder
 - [x] Add16
 - [x] Inc16
-- [ ] ALU-nostat
+- [x] ALUnostat
 - [ ] ALU
