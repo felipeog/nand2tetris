@@ -5,6 +5,6 @@
 - [x] RAM8
 - [x] RAM64
 - [x] RAM512
-- [ ] RAM4K
+- [x] RAM4K
 - [ ] RAM16K
 - [ ] PC
