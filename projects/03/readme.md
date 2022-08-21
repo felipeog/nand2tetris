@@ -1,6 +1,6 @@
 # Project 3: Sequential Logic
 
-- [ ] Bit
+- [x] Bit
 - [ ] Register
 - [ ] RAM8
 - [ ] RAM64
