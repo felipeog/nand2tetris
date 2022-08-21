@@ -2,7 +2,7 @@
 
 - [x] Bit
 - [x] Register
-- [ ] RAM8
+- [x] RAM8
 - [ ] RAM64
 - [ ] RAM512
 - [ ] RAM4K
