@@ -1,4 +1,4 @@
 # Project 4: Machine Language
 
-- [ ] Mult.asm
+- [x] Mult.asm
 - [ ] Fill.asm
