@@ -25,8 +25,8 @@
     @END
     D;JEQ
 
-    // if (R0 < R1) i = R0
-    // else i = R1
+    // if (R0 < R1) goto LT
+    // else goto GT
     @0
     D=M
     @1
@@ -43,10 +43,10 @@
     @i
     M=D
 
-    // sum = R1
+    // increment = R1
     @1
     D=M
-    @sum
+    @increment
     M=D
 
 (GT)
@@ -56,10 +56,10 @@
     @i
     M=D
 
-    // sum = R0
+    // increment = R0
     @0
     D=M
-    @sum
+    @increment
     M=D
 
 (LOOP)
@@ -69,8 +69,8 @@
     @END
     D;JEQ
 
-    // R2 = R2 + sum
-    @sum
+    // R2 = R2 + increment
+    @increment
     D=M
     @2
     M=M+D
