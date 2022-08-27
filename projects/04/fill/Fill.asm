@@ -66,7 +66,7 @@
     @KBD
     D=A-D
 
-    // if ((i - 24576) == 0) goto LOOP
+    // if (24576 - i == 0) goto LOOP
     // else goto PAINT
     @LOOP
     D;JEQ
