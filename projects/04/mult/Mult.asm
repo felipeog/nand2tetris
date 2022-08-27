@@ -13,10 +13,53 @@
     @2
     M=0
 
+    // if (R0 == 0) goto END
+    @0
+    D=M
+    @END
+    D;JEQ
+
+    // if (R1 == 0) goto END
+    @1
+    D=M
+    @END
+    D;JEQ
+
+    // if (R0 < R1) i = R0
+    // else i = R1
+    @0
+    D=M
+    @1
+    D=D-M
+    @LT
+    D;JLT
+    @GT
+    0;JMP
+
+(LT)
     // i = R0
     @0
     D=M
     @i
+    M=D
+
+    // sum = R1
+    @1
+    D=M
+    @sum
+    M=D
+
+(GT)
+    // i = R1
+    @1
+    D=M
+    @i
+    M=D
+
+    // sum = R0
+    @0
+    D=M
+    @sum
     M=D
 
 (LOOP)
@@ -26,8 +69,8 @@
     @END
     D;JEQ
 
-    // R2 = R2 + R1
-    @1
+    // R2 = R2 + sum
+    @sum
     D=M
     @2
     M=M+D
