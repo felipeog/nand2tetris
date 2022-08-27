@@ -63,12 +63,6 @@
     M=D
 
 (LOOP)
-    // if (i == 0) goto END
-    @i
-    D=M
-    @END
-    D;JEQ
-
     // R2 = R2 + increment
     @increment
     D=M
@@ -79,7 +73,12 @@
     @i
     M=M-1
 
-    // goto LOOP
+    // if (i == 0) goto END
+    // else goto LOOP
+    @i
+    D=M
+    @END
+    D;JEQ
     @LOOP
     0;JMP
 
