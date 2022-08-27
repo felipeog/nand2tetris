@@ -3,7 +3,7 @@
 - [x] [Project 1: Boolean Logic](https://github.com/felipeog/nand2tetris/tree/main/projects/01#readme)
 - [x] [Project 2: Boolean Arithmetic](https://github.com/felipeog/nand2tetris/tree/main/projects/02#readme)
 - [x] [Project 3: Sequential Logic](https://github.com/felipeog/nand2tetris/tree/main/projects/03#readme)
-- [ ] [Project 4: Machine Language](https://github.com/felipeog/nand2tetris/tree/main/projects/04#readme)
+- [x] [Project 4: Machine Language](https://github.com/felipeog/nand2tetris/tree/main/projects/04#readme)
 - [ ] [Project 5: Computer Architecture](https://github.com/felipeog/nand2tetris/tree/main/projects/05#readme)
 - [ ] [Project 6: Assembler](https://github.com/felipeog/nand2tetris/tree/main/projects/06#readme)
 - [ ] [Project 7: VM I: Stack Arithmetic](https://github.com/felipeog/nand2tetris/tree/main/projects/07#readme)
