@@ -10,26 +10,26 @@
 // R0 >= 0, R1 >= 0, and R0*R1 < 32768.
 
     // R2 = 0
-    @2
+    @R2
     M=0
 
     // if (R0 == 0) goto END
-    @0
+    @R0
     D=M
     @END
     D;JEQ
 
     // if (R1 == 0) goto END
-    @1
+    @R1
     D=M
     @END
     D;JEQ
 
     // if (R0 < R1) goto LT
     // else goto GT
-    @0
+    @R0
     D=M
-    @1
+    @R1
     D=D-M
     @LT
     D;JLT
@@ -38,26 +38,26 @@
 
 (LT)
     // i = R0
-    @0
+    @R0
     D=M
     @i
     M=D
 
     // increment = R1
-    @1
+    @R1
     D=M
     @increment
     M=D
 
 (GT)
     // i = R1
-    @1
+    @R1
     D=M
     @i
     M=D
 
     // increment = R0
-    @0
+    @R0
     D=M
     @increment
     M=D
@@ -66,7 +66,7 @@
     // R2 = R2 + increment
     @increment
     D=M
-    @2
+    @R2
     M=M+D
 
     // i = i - 1
